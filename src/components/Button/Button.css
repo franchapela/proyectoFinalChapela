@@ -1,0 +1,11 @@
+.btn{
+    width: auto;
+    background-color: #bb3f22;
+    border: none;
+    font-weight: bold;
+    font-size: 1.3em;
+}
+.btn:hover{
+    text-decoration: underline;
+    cursor:pointer;
+}

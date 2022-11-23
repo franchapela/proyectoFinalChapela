@@ -1,0 +1,7 @@
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    height: auto;
+    max-height: 5rem;
+    background-color: #bb3f22;
+}
