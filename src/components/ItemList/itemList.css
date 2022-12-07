@@ -1,0 +1,26 @@
+.itemList{
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    width: 30rem;
+}
+h3{
+    margin: 5px 0 10px 0;
+    color: #ffff;
+}
+span{
+    margin: 0px 0 0px 0;
+    color: #ffff;
+    font-size: 1.3rem;
+}
+.link{
+    text-decoration: none;
+    color: #fff;
+    margin: 10px 0 20px 0;
+}
+.link:hover{
+    text-decoration: underline;
+}
+img{
+    border-radius: 30px; 
+ }

@@ -1,0 +1,21 @@
+.itemDetailContainer{
+    display: flex;
+    margin: auto;
+    background-color: #33b3;
+    flex-direction: column;
+    width: 40rem;
+    padding: 1rem 5rem;
+    border-radius: 60px;
+}
+img{
+   border-radius: 30px; 
+}
+p{
+    color: #ffff;
+    margin: 10px 0;
+    text-align: start;
+}
+h2{
+    color: #ffff;
+    font-weight: normal;
+}

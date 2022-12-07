@@ -1,0 +1,8 @@
+.itemListContainer{
+    display: flex;
+    flex-direction: column;
+}
+h1{
+    margin: 20px 0;
+    color: #ffff;
+}

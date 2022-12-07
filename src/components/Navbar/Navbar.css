@@ -1,0 +1,16 @@
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: auto;
+    max-height: 5rem;
+    background-color: #bb3f22;
+    height: 3rem;
+}
+.link{
+    text-decoration: none;
+    color: #fff;
+}
+.link:hover{
+    text-decoration: underline;
+}
