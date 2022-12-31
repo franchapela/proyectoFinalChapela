@@ -1,8 +1,8 @@
 import {useState} from 'react'
 import './ItemCount.css'
 
-const ItemCount = ({init, stock}) =>{
-    const [count, setCount] = useState(init)
+const ItemCount = ({stock, onAdd}) =>{
+    const [count, setCount] = useState(0)
 
 
         const increment = () =>{
@@ -12,7 +12,7 @@ const ItemCount = ({init, stock}) =>{
         }
 
     const decrement = () =>{
-        if(count > 1){
+        if(count > 0){
             setCount(count-1)
         }
     }
@@ -25,8 +25,8 @@ const ItemCount = ({init, stock}) =>{
                 <button onClick={() => decrement()}>-</button>
                 <h3 className='quantityDisplay'>{count}</h3>
                 <button onClick={() => increment()}>+</button>
+                <button onClick={() => onAdd(count)} disabled={count === 0}>Añadir al carro</button>
             </div>
-            <button>Añadir al carro</button>
         </div>
     )
 }

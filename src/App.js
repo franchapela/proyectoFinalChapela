@@ -3,41 +3,30 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+import Cart from './components/Cart/Cart';
+import { CartProvider } from './context/CartContext';
+import Checkout from './components/Checkout/Checkout';
 
-// const notes = [
-//   {
-//     id: '1',
-//     name: 'uno',
-//     desc: 'numero'
-//   },
-//   {
-//     id: '2',
-//     name: 'dos',
-//     desc: 'numero'
-//   }
-// ]
-// const [show, setShow] = useState(true)
-// const getNotes = () => {
-//   return new Promise((resolve) =>{
-//     resolve(notes)
-//   },3000)
-// }
+
+
 function App() {
 
 
-//   getNotes().then(Response =>{
-//     console.log(Response)
-//   })
+
   return (
     <div className="App">
-      <BrowserRouter>
-        <Navbar/>
-        <Routes>
-          <Route path='/' element={<ItemListContainer/>}/>
-          <Route path='/category/:category' element={<ItemListContainer/>}/>
-          <Route path='/item/:id' element={<ItemDetailContainer/>}/>
-        </Routes>
-      </BrowserRouter>
+      <CartProvider>
+        <BrowserRouter>
+          <Navbar/>
+          <Routes>
+            <Route path='/' element={<ItemListContainer/>}/>
+            <Route path='/category/:category' element={<ItemListContainer/>}/>
+            <Route path='/item/:id' element={<ItemDetailContainer/>}/>
+            <Route path='/cart' element={<Cart/>}/>
+            <Route path='/checkout' element={<Checkout/>}/>
+          </Routes>
+        </BrowserRouter>
+      </CartProvider>
     </div>
   );
 }
